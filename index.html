@@ -1,53 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Naya Sitara</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #ffffff;
+      font-family: sans-serif;
+      background: #ffffff;
       color: #000000;
-      font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       height: 100vh;
       text-align: center;
     }
 
-    img.logo {
-      max-width: 80%;
-      height: auto;
-      margin-bottom: 30px;
+    img {
+      max-width: 200px;
+      margin-bottom: 2rem;
     }
 
-    .email-links a {
-      display: block;
-      margin: 10px 0;
-      font-size: 18px;
+    .emails {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 90%;
+      max-width: 800px;
+    }
+
+    .email-block {
+      font-size: 1rem;
+    }
+
+    .email-block a {
+      color: black;
       text-decoration: none;
-      color: #000000;
-      transition: color 0.2s ease;
+      font-weight: bold;
     }
 
-    .email-links a:hover {
-      color: #555555;
+    /* Desktop layout */
+    @media (min-width: 768px) {
+      .emails {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .email-block {
+        flex: 1 1 45%;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Replace with your actual logo file path -->
-  <img src="logo.png" alt="Naya Sitara Logo" class="logo">
 
-  <div class="email-links">
-    <a href="mailto:talent@nayasitara.com">talent@nayasitara.com</a>
-    <a href="mailto:info@nayasitara.com">info@nayasitara.com</a>
-    <a href="mailto:roster@nayasitara.com">roster@nayasitara.com</a>
-    <a href="mailto:press@nayasitara.com">press@nayasitara.com</a>
+  <!-- Replace 'logo.png' with your actual logo path -->
+  <img src="logo.png" alt="Naya Sitara Logo" />
+
+  <div class="emails">
+    <div class="email-block">
+      for talent representation:<br />
+      <a href="mailto:talent@nayasitara.com">talent@nayasitara.com</a>
+    </div>
+    <div class="email-block">
+      for our current roster:<br />
+      <a href="mailto:roster@nayasitara.com">roster@nayasitara.com</a>
+    </div>
+    <div class="email-block">
+      for press inquiries:<br />
+      <a href="mailto:press@nayasitara.com">press@nayasitara.com</a>
+    </div>
+    <div class="email-block">
+      for all other inquiries:<br />
+      <a href="mailto:info@nayasitara.com">info@nayasitara.com</a>
+    </div>
   </div>
+
 </body>
 </html>
