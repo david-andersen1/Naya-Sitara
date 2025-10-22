@@ -1,0 +1,478 @@
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Disable scrolling when menu is active */
+.no-scroll {
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Body and HTML reset to ensure proper behavior */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 50rem;
+    margin: 0 auto 2rem;
+}
+
+/* Header */
+header.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background: #fff;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    flex-wrap: wrap;
+}
+
+/* Logo Adjustment */
+.site-header .logo {
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;  /* Ensures logo stays on the left */
+}
+
+.site-header .logo img {
+    height: 4.5rem;
+}
+
+/* Desktop Only Button */
+.cta-button.desktop-only {
+    margin-right: 3.5rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 48rem) {
+    /* Hide the desktop button on smaller screens */
+    .cta-button.desktop-only {
+        display: none;
+    }
+
+    /* Move the logo slightly left */
+    .site-header .logo {
+        margin-left: -2.5rem;  /* Moves logo slightly left */
+    }
+
+    /* Mobile Menu Icon inside the header */
+    .menu-icon {
+        font-size: 3rem; /* Icon size */
+        margin-right: 2.5rem; /* Add a little spacing on the right side */
+        margin-top: -0.333rem; /* Less spacing on the top side */
+        cursor: pointer;
+        padding: 0.5rem;
+        display: block;
+        z-index: 99999; /* Ensure it's above other elements */
+        color: white;
+    }
+
+    /* Adjust header layout for mobile */
+    .site-header {
+        justify-content: space-between;  /* Keep left-aligned logo and right-aligned menu icon */
+        padding: 0.5rem 1rem;  /* Adjust padding to prevent overflow */
+    }
+
+    /* Ensure the logo stays left and the menu icon stays right */
+    .site-header .logo {
+        flex-grow: 0;  /* Don't take up extra space */
+    }
+}
+
+/* Adjustments for mobile menu */
+#mobile-menu {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    position: fixed;
+    top: 4rem; /* Position below the header */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 4rem); /* Ensure it takes up the remaining space */
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 999998;
+    padding-top: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#mobile-menu.active {
+    display: flex; /* Show menu when active */
+}
+
+/* Mobile Menu Links */
+#mobile-menu a {
+    color: #000;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    width: 100%;
+}
+
+#mobile-menu a:hover {
+    background-color: #eee;
+}
+  
+/* Hero Section */
+.hero {
+    padding: 5rem 1.25rem 2.5rem;
+    background: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 50rem;
+    margin: 0 auto 1.25rem;
+    opacity: 0.8;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 0.9375rem 1.875rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 0.3125rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #eee;
+    transform: scale(1.05);
+}
+
+/* Sections */
+section {
+    padding: 5rem 1.25rem;
+    max-width: 56.25rem;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #000;
+}
+
+/* Why Now Section */
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.industry-card {
+    background: #eee;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0 1rem rgba(215, 215, 215, 0.5);
+}
+
+.industry-card h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.industry-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Why Andersen */
+.timeline {
+    display: flex;
+    justify-content: space-evenly; /* Evenly distribute boxes horizontally */
+    align-items: center;
+    position: relative;
+    margin-top: 3rem;
+    z-index: 1;
+}
+
+.timeline-step {
+    background: #fff;
+    color: #000;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    position: relative;
+    width: 25%; /* Keep boxes wide on desktop */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-step:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0 1rem rgba(255, 215, 0, 0.5);
+    z-index: 2;
+}
+
+.timeline-step h3 {
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-step p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-step {
+        width: 80%;
+        margin-bottom: 2rem; /* Keep even spacing between boxes */
+    }
+}
+
+/* Why We Exist Section */
+#why-we-exist {
+    padding: 0.5rem 1.25rem;
+}
+
+#why-we-exist h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#why-we-exist p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    max-width: 50rem;
+    margin: 0 auto 2rem;
+}
+
+
+/* Comparison Table */
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.comparison-table th {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #fff;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin-top: 3rem;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    max-width: 50rem;
+    margin: 0 auto 2rem;
+    color: #000;
+    opacity: 0.8;
+}
+
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    background: #eee;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+    outline: none;
+    border-color: #eee;
+    background-color: #333;
+}
+
+.contact button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background: #222;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact button:hover {
+    background: #000;
+    transform: scale(1.05);
+}
+
+@media (max-width: 48rem) {
+    .contact form {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+    background-color: #fff;
+    padding: 3rem 1.25rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.newsletter-signup h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.newsletter-signup p {
+    font-size: 1.2rem;
+    max-width: 50rem;
+    margin: 0 auto 2rem;
+    color: #000;
+    opacity: 0.8;
+}
+
+.newsletter-signup form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-signup input {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    color: #000;
+    background: #eee;
+    width: 25rem;
+    transition: all 0.3s ease;
+}
+
+.newsletter-signup input:focus {
+    outline: none;
+    border-color: #eee;
+    background-color: #222;
+}
+
+.newsletter-signup button {
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background: #FFD700;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter-signup button:hover {
+    background: #b89600;
+    transform: scale(1.05);
+}
+
+@media (max-width: 48rem) {
+    .newsletter-signup input {
+        width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    padding: 3.75rem 1.25rem;
+    background: #fff;
+    text-align: center;
+}
+
+footer .footer-links a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 1rem;
+    opacity: 0.7;
+}
+
+/* Logo */
+footer .logo {
+    padding-left: 2.5rem;
+}
+
+footer .logo img {
+    height: 4.5rem;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-bottom: 1rem; /* Adds spacing below copyright text */
+}
+
+/* Decrease link text size on mobile */
+@media (max-width: 48rem) {
+    footer .footer-links a {
+        font-size: 0.7rem; /* Slightly smaller text */
+    }
+}
