@@ -1,85 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Naya Sitara</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background: #ffffff;
-      color: #000000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    img {
-      max-width: 300px;
-      margin-top: -1rem;
-      margin-bottom: 1rem;
-    }
-
-    .emails {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      width: 90%;
-      max-width: 800px;
-    }
-
-    .email-block {
-      font-size: 1rem;
-    }
-
-    .email-block a {
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Desktop layout */
-    @media (min-width: 768px) {
-      .emails {
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-
-      .email-block {
-        flex: 1 1 45%;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divina Global</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/x-icon" href="/divina-favicon.ico">
 </head>
 <body>
+<header class="site-header">
+    <a href="/" class="logo"><img src="/divina-logo.png" alt="Divina Logo"></a>
 
-  <!-- Replace 'logo.png' with your actual logo path -->
-  <img src="logo.png" alt="Naya Sitara Logo" />
+    <!-- Desktop Button -->
+    <a href="#contact" class="cta-button desktop-only">Request Full Roster</a>
 
-  <div class="emails">
-    <div class="email-block">
-      for talent representation:<br />
-      <a href="mailto:talent@nayasitara.com">talent@nayasitara.com</a>
+    <!-- Mobile Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle menu">☰</div>
+</header>
+
+<div id="mobile-menu" class="mobile-nav">
+    <a href="#about-us" onclick="closeMenu()">About Us</a>
+    <a href="#our-expertise" onclick="closeMenu()">Our Expertise</a>
+    <a href="#contact" onclick="closeMenu()">Request Full Roster</a>
+</div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Next-Gen Representation for Extraordinary Women</h1>
+        <a href="#contact" class="cta-button">Request Full Roster</a>
+    </section>
+
+<!-- About Us Section -->
+<section id="about-us" class="about-us">
+    <h2>About Us</h2>
+    <p>Divina is a global talent agency redefining the way the world discovers and develops beauty. We represent women who embody charisma, elegance, and creative power — guiding them from local discovery to international recognition. With a presence across emerging and established markets, Divina connects visionary talent with leading brands, campaigns, and opportunities worldwide. Our mission is simple: to uncover rare potential and shape it into timeless influence.</p>
+</section>
+
+<!-- Our Expertise Section -->
+<section id="our-expertise" class="our-expertise">
+    <h2>Our Expertise</h2>
+    <p>At Andersen Industries, we take ideas from the earliest spark to industry leadership.<br>We combine deep technical expertise, strategic capital, and a founder-first mindset to turn bold concepts into enduring companies.</p>
+    <div class="timeline">
+        <div class="timeline-step">
+            <h3>Talent Management</h3>
+            <p>We represent extraordinary women with vision, presence, and purpose. From discovery to global recognition, we provide strategic guidance, career development, and high-level representation built on trust and long-term growth.</p>
+        </div>
+        <div class="timeline-step">
+            <h3>Marketing</h3>
+            <p>Divina bridges talent and culture through world-class marketing — from influencer campaigns and digital storytelling to full-scale brand collaborations. We position our talent at the center of meaningful, high-impact narratives that move audiences.</p>
+        </div>
+        <div class="timeline-step">
+            <h3>Brand</h3>
+            <p>We secure partnerships and brand deals with leading fashion, beauty, and lifestyle companies worldwide. Every collaboration is curated to align with our talent’s image, values, and long-term brand equity.</p>
+        </div>
+      <br>
+         <div class="timeline-step">
+            <h3>Venture Studio</h3>
+            <p>Beyond partnerships, we build ownership. Divina collaborates with experienced entrepreneurs to co-launch companies with our talent — turning influence into equity and creative power into sustainable business.</p>
+        </div>
+        <div class="timeline-step">
+            <h3>Licensing</h3>
+            <p>Our team develops global licensing opportunities across fashion, beauty, wellness, and lifestyle, transforming signature aesthetics and personal brands into enduring commercial ventures.</p>
+        </div>
+        <div class="timeline-step">
+            <h3>Speaking</h3>
+            <p>Divina connects our talent with high-visibility speaking engagements — from international panels and conferences to podcasts and media appearances — amplifying their voice, message, and impact.</p>
+        </div>
     </div>
-    <div class="email-block">
-      for our current roster:<br />
-      <a href="mailto:roster@nayasitara.com">roster@nayasitara.com</a>
-    </div>
-    <div class="email-block">
-      for press inquiries:<br />
-      <a href="mailto:press@nayasitara.com">press@nayasitara.com</a>
-    </div>
-    <div class="email-block">
-      for all other inquiries:<br />
-      <a href="mailto:info@nayasitara.com">info@nayasitara.com</a>
-    </div>
-  </div>
+</section>
+
+<!-- Contact Form Section -->
+<section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <p>Tell us about your project and we'll get back to you with our full roster.</p>
+    
+    <form id="contact-form" action="https://formspree.io/f/mnnpqkrd" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Tell Us About Your Project..." rows="6" required></textarea>
+        <button type="submit">Send Request</button>
+        <p id="success-message" style="display: none; color: white;">Request sent successfully!</p>
+    </form>
+</section>
+
+         <!-- Footer -->
+     <footer id="footer">
+       <a href="/" class="logo"><img src="/divina-logo.png" alt="Divina Logo"></a>
+       <div class="footer-text">
+          © <span id="year"></span> Divina Global, Incorporated. All Rights Reserved.
+       </div>
+       
+       <div class="footer-links">
+          <a href="/terms/" target="_blank" rel="noopener noreferrer">Terms of Service</a> |
+          <a href="/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> |
+          <a href="/disclosures/" target="_blank" rel="noopener noreferrer">Disclosures</a>
+       </div>
+      </footer>
+
+    <!-- Load JavaScript -->
+<script src="/script.js" defer></script>
 
 </body>
 </html>
