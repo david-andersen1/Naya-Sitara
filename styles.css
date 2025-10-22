@@ -18,7 +18,7 @@ html, body {
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #fff;
+    background-color: #FAF9F6;
     color: #000;
     text-align: center;
 }
@@ -36,7 +36,7 @@ header.site-header {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2rem;
-    background: #fff;
+    background: #FAF9F6;
     position: relative;
     width: 100%;
     top: 0;
@@ -132,7 +132,7 @@ header.site-header {
 /* Hero Section */
 .hero {
     padding: 5rem 1.25rem 2.5rem;
-    background: #fff;
+    background: #FAF9F6;
 }
 
 .hero h1 {
@@ -151,7 +151,7 @@ header.site-header {
 .cta-button {
     display: inline-block;
     background: #000;
-    color: #fff;
+    color: #FAF9F6;
     padding: 0.9375rem 1.875rem;
     font-size: 1.2rem;
     font-weight: 600;
@@ -286,19 +286,19 @@ h2 {
 }
 
 .comparison-table th, .comparison-table td {
-    border: 1px solid #fff;
+    border: 1px solid #FAF9F6;
     padding: 1rem;
     text-align: center;
 }
 
 .comparison-table th {
     background-color: #000;
-    color: #fff;
+    color: #FAF9F6;
 }
 
 /* Contact Section */
 .contact {
-    background-color: #fff;
+    background-color: #FAF9F6;
     padding: 2rem 1.25rem;
     text-align: center;
     border-radius: 1rem;
@@ -347,7 +347,7 @@ h2 {
     padding: 1rem 2rem;
     font-size: 1.2rem;
     font-weight: 600;
-    color: #fff;
+    color: #FAF9F6;
     background: #222;
     border-radius: 0.5rem;
     border: none;
@@ -366,80 +366,10 @@ h2 {
     }
 }
 
-/* Newsletter Signup */
-.newsletter-signup {
-    background-color: #fff;
-    padding: 3rem 1.25rem;
-    text-align: center;
-    border-radius: 1rem;
-    margin-top: 2rem;
-}
-
-.newsletter-signup h2 {
-    font-size: 2.5rem;
-    color: #000;
-    margin-bottom: 1rem;
-}
-
-.newsletter-signup p {
-    font-size: 1.2rem;
-    max-width: 50rem;
-    margin: 0 auto 2rem;
-    color: #000;
-    opacity: 0.8;
-}
-
-.newsletter-signup form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.newsletter-signup input {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: 2px solid #000;
-    border-radius: 0.5rem;
-    margin-right: 1rem;
-    color: #000;
-    background: #eee;
-    width: 25rem;
-    transition: all 0.3s ease;
-}
-
-.newsletter-signup input:focus {
-    outline: none;
-    border-color: #eee;
-    background-color: #222;
-}
-
-.newsletter-signup button {
-    padding: 0.75rem 2rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #fff;
-    background: #FFD700;
-    border-radius: 0.5rem;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.newsletter-signup button:hover {
-    background: #b89600;
-    transform: scale(1.05);
-}
-
-@media (max-width: 48rem) {
-    .newsletter-signup input {
-        width: 100%;
-    }
-}
-
 /* Footer */
 footer {
     padding: 3.75rem 1.25rem;
-    background: #fff;
+    background: #FAF9F6;
     text-align: center;
 }
 
