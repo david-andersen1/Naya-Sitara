@@ -155,7 +155,7 @@ header.site-header {
     padding: 0.9375rem 1.875rem;
     font-size: 1.2rem;
     font-weight: 600;
-    border-radius: 0.3125rem;
+    border-radius: 1rem;
     text-decoration: none;
     transition: 0.3s;
 }
